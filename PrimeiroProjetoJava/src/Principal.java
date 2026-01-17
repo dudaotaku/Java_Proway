@@ -30,6 +30,7 @@ public class Principal {
         String nomeUsuario = leitor.next();
         System.out.println("Seja bem vindo: " + nomeUsuario + "!!");
 
+       // teste 1.0
     }
 }
 
