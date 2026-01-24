@@ -87,18 +87,22 @@ public class Lista {
                     break;
                 case 5:
 
-                    for(String p : listaProduto){
-                        String produtoContar = p;
-                        count = 0;
-                        for(String produto : listaProduto){
-                            if(produto.equals(produtoContar)){
-                                count++;
+                    List<String> listaProdutosJaContados = new ArrayList<>();
+
+                    for (String produtoContar : listaProduto) {
+
+                        if (listaProdutosJaContados.indexOf(produtoContar) < 0) {
+                            int contador = 0;
+                            for (String produto : listaProduto) {
+                                if (produto.equals(produtoContar)) {
+                                    contador ++;
+                                }
                             }
+                            System.out.println(produtoContar + " - " + contador);
+                            listaProdutosJaContados.add(produtoContar);
                         }
-                        System.out.println(produtoContar + " - " + count);
+
                     }
-
-
                     break;
                 case 0:
                     System.out.println("Saindo do sistema...");
