@@ -14,6 +14,7 @@ public class Pessoa {
 
     }
 
+
     public String getNome() {
         return nome;
     }
@@ -74,5 +75,26 @@ public class Pessoa {
         return this.peso / (this.altura * this.altura);
     }
 
+    public void verificarMaiorIdade() {
 
+        if (this.idade >= 18) {
+            System.out.println(this.nome + " já é considerado MAIOR de idade.");
+        } else {
+            System.out.println(this.nome + " ainda é MENOR de idade.");
+        }
+    }
+
+    // metodo para retornar as informacoes para o JOptionPane
+
+    public String getDados(){
+        return " -- Dados da pessoa --" +
+                "\nNome: " + this.nome +
+                "\nIdade: " + this.idade +
+                "\nAltura: " + this.altura +
+                "\nPeso: " + this.peso;
+
+    }
+    public String verificaIdade() {
+        return (this.idade>=18)?this.nome + " já é considerado MAIOR de idade.": this.nome + " ainda é MENOR de idade.";
+    }
 }
