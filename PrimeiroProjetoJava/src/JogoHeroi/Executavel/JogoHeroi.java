@@ -43,7 +43,7 @@ public class JogoHeroi {
         // Inimigos
         Inimigo goblin = new Inimigo("Goblin", 15 ,100 );
 
-        Inimigo ogro = new Inimigo("Ogro", 40,200 );
+        Inimigo ogro = new Inimigo("Ogro", 20,200 ); ///mudei para testar
 
         Inimigo mortoVivo = new Inimigo("Morto vivo (Mago)",50,250 );
 
@@ -239,7 +239,7 @@ public class JogoHeroi {
                     if(personagem.getVida()==0){
                         personagem.setStatus(true);
                     }
-
+                    personagem.getTreinoLuta().resetarLuta();
                     personagem.setVida(vidaPersonagem);
                     inimigo.setVidaInimigo(vidaInimigo);
 
