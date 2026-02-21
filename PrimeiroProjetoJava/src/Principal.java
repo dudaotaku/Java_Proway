@@ -1,6 +1,12 @@
+import Controller.TurmaController;
+import DAO.CursoDao;
+import DAO.TurmaDao;
+import Modelo.Curso;
+import Modelo.Turma;
 import Utils.ConexaoDb;
 import Modelo.Aluno;
 import DAO.AlunoDao;
+import java.time.LocalDate;
 
 
 public class Principal {
@@ -16,6 +22,16 @@ public class Principal {
         aluno.setNota(75);
         AlunoDao alunoDao = new AlunoDao();
         alunoDao.salvar(aluno);
+        curso.setId(1);
+        curso.setNomeCurso("Java");
+        curso.setDataInicio(LocalDate.of(2026, 1, 10));
+        curso.setDataFim(LocalDate.of(2026, 10, 26));
+        CursoDao cursoDao = new CursoDao();
+        cursoDao.salvarCurso(curso);
+
+        TurmaController tc = new TurmaController();
+        tc.matricular(aluno,curso);
+
 
 
         /*Aluno aluno1= new Aluno(1,"Mieruko",8.0f);

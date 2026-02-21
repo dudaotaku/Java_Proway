@@ -18,7 +18,7 @@ public class AlunoDao implements Icrud {
             stm.setFloat(2,aluno.getNota());
             stm.execute();
         } catch (SQLException ex){
-            System.out.println("Erro: " + ex.getMessage());
+            System.out.println("Erro1: " + ex.getMessage());
         }
         return aluno;
     }
@@ -40,15 +40,9 @@ public class AlunoDao implements Icrud {
 
     @Override
     public List<Aluno> consulta() {
-        try{
-            String sql= "select * from tb_aluno";
-            PreparedStatement stm = Utils.ConexaoDb.getConexao().prepareStatement(sql);
-            stm.getString(1, aluno.getNome());
-            stm.getFloat(2,aluno.getNota());
-            stm.execute();
-        } catch (SQLException ex){
-            System.out.println("Erro: " + ex.getMessage());
-        }    }
+        return List.of();
+    }
+
 
     @Override
     public void alterar(Aluno aluno) {

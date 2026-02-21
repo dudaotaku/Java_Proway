@@ -2,13 +2,17 @@ package Modelo;
 
 public class Turma {
     private int id;
-    private int idCurso;
-    private int idAluno;
+    private Aluno aluno;
+    private Curso curso;
 
-    public Turma(int id, int idCurso, int idAluno) {
+    public Turma() {
+
+    }
+
+    public Turma(int id, Aluno aluno, Curso curso) {
         this.id = id;
-        this.idCurso = idCurso;
-        this.idAluno = idAluno;
+        this.aluno = aluno;
+        this.curso = curso;
     }
 
     public int getId() {
@@ -19,19 +23,19 @@ public class Turma {
         this.id = id;
     }
 
-    public int getIdCurso() {
-        return idCurso;
+    public Aluno getAluno() {
+        return aluno;
     }
 
-    public void setIdCurso(int idCurso) {
-        this.idCurso = idCurso;
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 
-    public int getIdAluno() {
-        return idAluno;
+    public Curso getCurso() {
+        return curso;
     }
 
-    public void setIdAluno(int idAluno) {
-        this.idAluno = idAluno;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 }

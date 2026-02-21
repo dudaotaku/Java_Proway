@@ -1,12 +1,15 @@
 package Interfaces;
+
+import Modelo.Curso;
+
 import java.util.List;
 
 public interface CursoInter {
 
-    public Curso salvar (Curso curso);
-    public void excluir(Curso curso);
-    public void excluir(int id);
-    public Curso consultar(int id);
-    public List<Curso> consulta();
-    public void alterar(Curso curso);
+    public Curso salvarCurso (Curso curso);
+    public void excluirCurso(Curso curso);
+    public void excluirCurso(int id);
+    public Curso consultarCurso(int id);
+    public List<Curso> consultaCurso();
+    public void alterarCurso(Curso curso);
 }

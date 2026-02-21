@@ -1,14 +1,19 @@
 package Modelo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Curso {
     private int id;
     private String nomeCurso;
-    private Date dataInicio;
-    private Date dataFim;
+    private LocalDate dataInicio;
+    private LocalDate dataFim;
 
-    public Curso(int id, String nomeCurso, Date dataInicio, Date dataFim) {
+    public Curso() {
+
+    }
+
+    public Curso(int id, String nomeCurso, LocalDate dataInicio, LocalDate dataFim) {
         this.id = id;
         this.nomeCurso = nomeCurso;
         this.dataInicio = dataInicio;
@@ -31,19 +36,19 @@ public class Curso {
         this.nomeCurso = nomeCurso;
     }
 
-    public Date getDataInicio() {
+    public LocalDate getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public Date getDataFim() {
+    public LocalDate getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(Date dataFim) {
+    public void setDataFim(LocalDate dataFim) {
         this.dataFim = dataFim;
     }
 }

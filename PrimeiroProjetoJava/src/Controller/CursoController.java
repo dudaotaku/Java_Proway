@@ -1,15 +1,17 @@
 package Controller;
 
+import Modelo.Curso;
+
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class CursoController {
 
-    public static String Matriclua(Curso curso){
-        LocalDate ld = new LocalDate.now();
-        if(ld < dataFim){
-            return "Não é possivel matricular o aluno após a data final do curso";
+    public static String verificaCurso(Curso curso){
+        if(LocalDate.now().isAfter(curso.getDataFim())){
+            return "Não foi possivel matricular o aluno, pois o curso já finalizou";
         }
-        return
+        return "Curso ativo";
     }
 
 }

@@ -1,6 +1,8 @@
 package Interfaces;
 import Modelo.Aluno;
 import java.util.List;
+import  Modelo.Curso;
+import Modelo.Turma;
 
 public interface Icrud {
 
@@ -11,13 +13,8 @@ public interface Icrud {
     public List<Aluno> consulta();
     public void alterar(Aluno aluno);
 
-
-
-    /*public Turma salvar (Turma turma);
-    public void excluir(Turma turma);
-    public void excluir(int id);
-    public Turma consultar(int id);
-    public List<Turma> consulta();
-    public void alterar(Turma turma);*/
-
     }
+
+
+
+
