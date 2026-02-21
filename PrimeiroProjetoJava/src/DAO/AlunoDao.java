@@ -40,8 +40,15 @@ public class AlunoDao implements Icrud {
 
     @Override
     public List<Aluno> consulta() {
-        return List.of();
-    }
+        try{
+            String sql= "select * from tb_aluno";
+            PreparedStatement stm = Utils.ConexaoDb.getConexao().prepareStatement(sql);
+            stm.getString(1, aluno.getNome());
+            stm.getFloat(2,aluno.getNota());
+            stm.execute();
+        } catch (SQLException ex){
+            System.out.println("Erro: " + ex.getMessage());
+        }    }
 
     @Override
     public void alterar(Aluno aluno) {
