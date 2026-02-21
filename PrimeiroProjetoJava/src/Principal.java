@@ -1,36 +1,26 @@
-import java.util.Scanner;
+import Utils.ConexaoDb;
 
 public class Principal {
 
     //atalho_main - função responsalvel por permitir que a classe seja executavel
     public static void main(String[] args) {
+        /*Aluno aluno= new Aluno();
 
-        //espaço para inserir as linhas de comando
-        //comando de saida de dados - atalho sout
-        System.out.println("Hello World!...");
+        aluno.setId(1);
+        aluno.setNome("Maria");
+        aluno.setNota(75);
+        System.out.println(toString());
 
-        //declaração de variaveis
-        //variavel sempre se inicia com letra minuscula
-        String aluno = "Mieruko-chan";
+        Aluno aluno1= new Aluno(1,"Mieruko",8.0f);
+        System.out.println(aluno1.getId() + " " + aluno1.getNome() + " " + aluno1.getNota());
 
-        Integer codigo = 7; // variaveis de objetos
-        int matricula = 2610; // variaveis primitivas
+        AlunoController ac = new AlunoController();
+        AlunoController.getSituacao(aluno1);
+        System.out.println(AlunoController.getSituacao(aluno1));*/
 
-        Double mediaSemestral = 8.9; // variaveis de objetos
-        double mediaAnual = 9.0; // variaveis primitivas
-
-        Boolean situacaoCadastro = true; // variaveis de objetos
-        boolean aprovado = true; // variaveis primitivas
-
-        //comando de entrada de dados;
-
-        Scanner leitor = new Scanner(System.in);
-
-        System.out.println("Digite seu nome: ");
-        String nomeUsuario = leitor.next();
-        System.out.println("Seja bem vindo: " + nomeUsuario + "!!");
-
-       // teste 1.0
+        if(ConexaoDb.getConexao() != null){
+            System.out.println("Conectado");
+        }
     }
 }
 
